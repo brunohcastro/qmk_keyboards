@@ -56,7 +56,8 @@ enum funcs_keycodes {
 #define TG_TC         TG(_TOUCHCURSOR)
 #define TG_MC         TG(_MOUSECURSOR)
 #define TG_NP         TG(_NUMPAD)
-#define ONE_HND       TG(_ONEHAND)
+#define TG_OHDV       TG(_ONEHANDDV)
+#define TG_OHQW       TG(_ONEHANDQW)
 
 // Layer while holding
 #define TCURSOR       MO(_TOUCHCURSOR)
@@ -182,7 +183,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     { KC_BSPC, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
     { _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
     { _______, TC_SCLN, _______, _______, _______, _______, _______, _______, _______, _______, TC_Z   , _______},
-    { _______, _______, _______, _______, _______, SWP_HND, SWP_HND, _______, _______, _______, _______, _______}
+    { _______, _______, _______, _______, _______, SWP_HND, SWP_HND, _______, _______, TG_OHDV, _______, _______}
   },
 
   /* One Hand Layer - QWERTY
@@ -202,7 +203,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     { KC_BSPC, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
     { _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______},
     { _______, TC_Z   , _______, _______, _______, _______, _______, _______, _______, _______, TC_SLSH, _______},
-    { _______, _______, _______, _______, _______, SWP_HND, SWP_HND, _______, _______, _______, _______, _______}
+    { _______, _______, _______, _______, _______, SWP_HND, SWP_HND, _______, _______, TG_OHQW, _______, _______}
   },
 
   /* Lower
@@ -251,7 +252,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     +========+========+========+========+========+========+========+========+========+========+========+========+
     |        | Bksp   | Home   | Up     | End    | Insert | Insert | Home   | Up     | End    | Bksp   |        |
     +--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+
-    |        | Spc    | Right  | Down   | Left   | PgUp   | PgUp   | Left   | Down   | Right  | Spc    |        |
+    |        | Spc    | Right  | Down   | Left   | PgUp   | PgUp   | Left   | Down   | Right  | Spc    | Tb/Ctl |
     +--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+
     |        |        |        |        | Del    | PgDown | PgDown | Del    |        |        |        |        |
     +--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+
@@ -260,7 +261,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
   [_TOUCHCURSOR] = {
     { _______, KC_BSPC, KC_HOME, KC_UP  , KC_END , KC_INS , KC_INS , KC_HOME, KC_UP  , KC_END , KC_BSPC, _______},
-    { _______, KC_SPC , KC_LEFT, KC_DOWN, KC_RGHT, KC_PGUP, KC_PGUP, KC_LEFT, KC_DOWN, KC_RGHT, KC_SPC , _______},
+    { _______, KC_SPC , KC_LEFT, KC_DOWN, KC_RGHT, KC_PGUP, KC_PGUP, KC_LEFT, KC_DOWN, KC_RGHT, KC_SPC , CTL_TAB},
     { _______, _______, XXXXXXX, XXXXXXX, KC_DEL , KC_PGDN, KC_PGDN, KC_DEL , XXXXXXX, XXXXXXX, _______, _______},
     { _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
   },
